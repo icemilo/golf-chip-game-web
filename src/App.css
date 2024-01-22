@@ -1,38 +1,148 @@
-.App {
+/* Import Neo둥근모 fonts */
+@import url('//cdn.jsdelivr.net/gh/neodgm/neodgm-webfont@1.530/neodgm/style.css');
+@import url('//cdn.jsdelivr.net/gh/neodgm/neodgm-webfont@1.530/neodgm_code/style.css');
+
+/* Reset and Base Styles */
+* {
+  font-family: 'NeoDunggeunmo', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  max-height: 1080px;
+  background: url("img/background.png") no-repeat center center fixed;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  color: #333;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+/* Balloons sample */
+section.message-list {
+  display: flex;
+  flex-direction: column;
+}
+.message-list > .message {
+  display: flex;
+  margin-top: 2rem;
+}
+.message-list > .message > .nes-balloon {
+  border-image-repeat: stretch;
+  max-width: 550px;
+}
+.message-list > .message i {
+  align-self: flex-end;
+}
+.message-list > .message.-left {
+  align-self: flex-start;
+}
+.message-list > .message.-right {
+  align-self: flex-end;
+}
+.message-list > .message.-left i {
+  margin-right: 2rem;
+}
+.message-list > .message.-right i {
+  margin-left: 2rem;
+}
+
+.icon-list > .blur-filter {
+  filter: blur(10px);
+}
+
+/* Container */
+.container {
+  max-width: 800px; /* Adjusted for better scaling */
+  width: 100%;
+  margin: auto;
+  padding: 0 10px;
+  overflow: hidden;
+}
+
+/* Header styles */
+.header {
+  background: #000;
+  color: #fff;
+  padding: 1rem;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1 {
+  font-size: 36px;
+  color: #fff; /* Primary color for headings */
+  margin-bottom: 10px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.banner {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.features {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-wrap: nowrap;
+  overflow-x: auto; /* Enable horizontal scrolling if needed */
 }
 
-.App-link {
-  color: #61dafb;
+.feature-card {
+  flex: 0 0 auto;
+  margin-right: 20px; /* Add spacing between features */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.feature-card img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.card-title {
+  font-size: 24px;
+  color: #fff; /* Text color for card title */
+  margin-bottom: 10px;
+}
+
+.card-text {
+  color: #000; /* Text color for card content */
+}
+
+/* Card Style for Players and Chips */
+.card {
+  min-height: 600px;
+  background: #fff;
+  opacity: 0.8;
+  margin: 0.5rem 0;
+  padding: 2rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.android-btn{
+  cursor:pointer;
+  border:none;
+  width:250px;
+}
+
+.ios-btn{
+  cursor:pointer;
+  border:none;
+  width:250px;
+}
+
+/* Footer styles */
+.footer {
+  text-align: center;
+  padding: 20px 0;
+  background-color: #333;
+  color: #fff;
+}
+
+/* Center align the buttons */
+.mt-5 {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-align: center;
 }
